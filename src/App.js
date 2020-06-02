@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import "./styles.css"
-import { PhotoshopPicker } from "react-color"
+import { SketchPicker } from "react-color"
 
-
-export default function App() {
+ function App() {
   const [color, setColor] = useState("#ff0000");
   return (
     <div>
-      <PhotoshopPicker
+      <SketchPicker
         color={color}
-        onChangeComplete={color => {
-          setColor(color.hex);
-        }}
+        onChangeComplete={ (color) => {setColor(color.hex)} }
       />
       <div
         style={{
@@ -23,4 +20,7 @@ export default function App() {
     </div>
   );
 }
+
+
+export default App;
 
